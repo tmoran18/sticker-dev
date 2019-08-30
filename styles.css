@@ -1,0 +1,636 @@
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+}
+
+/* VARIABLES */
+
+:root {
+   --montserrat: "Montserrat", sans-serif, verdana;
+   --white: #fff;
+   --black: #000;
+   --fbBlue: #3b5998;
+   --lnkBlue: #0077b5;
+   --emailRed: #d44638;
+   --teal: #00b4cf;
+   --yellow: #ffdf3d;
+   --pink: #ef5371;
+   --boxshadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+body {
+   font-size: 10px;
+   font-family: var(--montserrat);
+}
+
+/* Accessorie classes */
+.light-text {
+   font-weight: 400;
+}
+
+/* BODY SECTION */
+#home,
+#shop,
+#about,
+#contact {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+}
+
+#home {
+   background-image: linear-gradient(to bottom, #ff5c00, #f58f31, #edb566, #ead4a2, #f0eee2);
+}
+#shop {
+   background-color: #f8f8f8;
+}
+#contact {
+   background: linear-gradient(90deg, #be8cef 0%, rgba(61, 46, 232, 0.83) 100%);
+   align-items: center;
+}
+#main-wrapper {
+   margin-left: 360px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+/* *****************************ABOUT PAGE********************************* */
+
+.wrapper {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   z-index: -1;
+}
+
+.wrapper::before {
+   z-index: -1;
+   content: "";
+   top: 0;
+   left: 0;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: var(--yellow);
+   background-size: cover;
+   background-position: top;
+   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.top-content-container {
+   display: flex;
+   max-width: 1200px;
+   height: 50vh;
+   margin: auto;
+   z-index: 2;
+   justify-content: center;
+   align-items: center;
+}
+
+.top-content {
+   flex: 1;
+}
+.top-content p {
+   font-size: 1.2rem;
+   line-height: 2rem;
+   max-width: 40rem;
+   text-align: justify;
+   color: var(--black);
+}
+.profile-image img {
+   border-radius: 100%;
+   border: 2px solid var(--pink);
+}
+.about-header h2 {
+   font-size: 3rem;
+   font-weight: 300;
+   padding: 2rem 0;
+}
+
+.bottom-content-container {
+   display: flex;
+   justify-content: space-around;
+}
+
+.bottom-content-container > div {
+   max-width: 20rem;
+   padding: 0 2rem;
+}
+.bottom-image {
+   padding: 1rem;
+   display: block;
+   margin: auto;
+}
+
+.bottom-content-container h2 {
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 300;
+}
+
+.bottom-content-container p {
+   font-size: 1rem;
+   text-align: center;
+   line-height: 1.5rem;
+   padding-top: 1rem;
+   color: var(--black);
+}
+
+/* ****************************SHOP**************************** */
+.product-container {
+   width: 650px;
+   height: 680px;
+   margin: auto;
+   margin-top: 7vh;
+   padding-bottom: 5rem;
+}
+.image-container {
+   width: 85%;
+   height: 70%;
+   margin: auto;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.product-description {
+   margin-top: 2.5rem;
+   font-family: var(--montserrat);
+   margin: 2.5rem;
+}
+h2 {
+   font-weight: 400;
+   font-size: 1.5rem;
+   margin-left: 1rem;
+}
+.product-description p {
+   color: #6e6e6e;
+   font-size: 0.8rem;
+   line-height: 1.5rem;
+   padding: 1rem;
+}
+.price {
+   font-weight: 600;
+}
+.add-cart {
+   display: flex;
+   justify-content: center;
+}
+.snipcart-add-item {
+   width: 15rem;
+   height: 50px;
+   cursor: pointer;
+   background: #ff473a;
+   border: none;
+   border-radius: 2px;
+   color: var(--white);
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+.snipcart-add-item:hover {
+   background-color: var(--black);
+   color: var(--white);
+}
+/* ********************SOCIAL ICONS************************************ */
+/*** Social Icons Container ***/
+.social-icons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: row wrap;
+   margin-bottom: 1rem;
+}
+
+/*** Icon Styles and Animations ***/
+.social-icon {
+   display: flex;
+   position: relative;
+   overflow: hidden;
+   width: 64px;
+   height: 64px;
+   margin: 8px;
+   background-color: var(--white);
+   cursor: pointer;
+   border-radius: 50%;
+   box-shadow: var(--boxshadow);
+   text-decoration: none;
+   transition: all 0.3s ease;
+}
+.social-icon:hover {
+   transform: translateY(-4px);
+   box-shadow: var(--boxshadow);
+}
+.social-icon:hover::after {
+   transform: translate(0) scale(1.2);
+}
+.social-icon::after {
+   content: "";
+   width: 64px;
+   height: 64px;
+   position: absolute;
+   transform: translate(0, 64px);
+   border-radius: 50%;
+   transition: all 0.3s ease;
+}
+i {
+   margin: auto; /* Perfect centering thanks to parental flex */
+   font-size: 24px;
+   color: hsl(212, 16%, 48%);
+   z-index: 1; /* Make sure icons will be on top */
+   transition: all 0.3s ease;
+}
+.social-icon:hover i {
+   transform: scale(1.1);
+   color: var(--white);
+}
+
+.social-icon.facebook:after {
+   background-color: var(--fbBlue);
+}
+.social-icon.github:after {
+   background-color: var(--black);
+}
+.social-icon.linkedin:after {
+   background-color: var(--lnkBlue);
+}
+.email:after {
+   background-color: var(--emailRed);
+}
+
+/* Tooltip container */
+.tooltip {
+   position: relative;
+   display: inline-block;
+}
+
+/* Tooltip text */
+.tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   height: 34px;
+   color: var(--black);
+   border: 1px solid var(--black);
+   font-size: 1rem;
+   text-align: center;
+   padding: 5px 0;
+   border-radius: 6px;
+   top: -55px;
+   left: -55px;
+   position: absolute;
+   z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+   visibility: visible;
+}
+.tooltiptext::before {
+   content: "";
+   border-width: 10px 8px 0 8px;
+   border-style: solid;
+   border-color: var(--black) transparent transparent transparent;
+   position: absolute;
+   top: 44px;
+   left: 86px;
+}
+
+/* **********************Contact Form********************************** */
+/* Contact Form */
+.form-container {
+   background-color: var(--white);
+   border-radius: 5px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   height: 550px;
+   width: 800px;
+   display: flex;
+}
+
+.form-left,
+.form-right {
+   display: flex;
+   flex: 1;
+   height: 100%;
+}
+
+.form-left {
+   background-color: var(--teal);
+   color: var(--white);
+   text-align: center;
+   display: flex;
+}
+.form-left .form-left-content {
+   width: 90%;
+   height: 40%;
+   margin: auto;
+}
+h2 {
+   font-size: 2rem;
+}
+p {
+   font-size: 1rem;
+   padding-top: 1rem;
+   line-height: 1.5;
+}
+
+.form-right {
+   justify-content: center;
+   align-items: center;
+}
+.form-right .form-right-content {
+   display: flex;
+   height: 90%;
+   width: 90%;
+   text-align: center;
+}
+.form-right input,
+.form-right textarea {
+   background-color: #eee;
+   border: none;
+   padding: 12px 15px;
+   margin: 10px 0;
+   width: 85%;
+   font-size: 0.8rem;
+}
+input[type="submit"] {
+   border-radius: 20px;
+   background-color: var(--teal);
+   color: var(--white);
+   width: 50%;
+   font-size: 12px;
+   font-weight: bold;
+   padding: 12px 45px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   transition: transform 80ms ease-in;
+   cursor: pointer;
+}
+input[type="submit"]:hover {
+   opacity: 0.7;
+}
+h2 {
+   font-size: 2rem;
+}
+form p {
+   text-align: left;
+   padding-left: 1rem;
+}
+
+input:focus,
+textarea:focus {
+   outline: 1px solid var(--teal);
+}
+/* **********************NAVIGATION************************************ */
+/* SIDEBAR NAVIGATION */
+nav {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 360px;
+   background-color: var(--white);
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   transition: all ease 1s;
+   -webkit-transition: all ease1s;
+   box-shadow: var(--boxshadow);
+}
+.nav-link {
+   list-style: none;
+   padding: 2rem 5.7rem;
+   font-size: 1.2rem;
+}
+.logo-anchor {
+   display: flex;
+   margin: 3.5rem 1rem;
+}
+.nav-anchor,
+.logo-anchor {
+   font-weight: 300;
+   color: var(--black);
+   position: relative;
+}
+/* Underline Animation for Navbar Links */
+.nav-anchor:after {
+   content: "";
+   height: 2px;
+   position: absolute;
+   bottom: -0.5rem;
+   left: 0;
+   width: 0%;
+   background: var(--black);
+   transition: 0.6s;
+}
+.nav-anchor:hover:after {
+   width: 100%;
+}
+.menu {
+   flex-basis: 60%;
+}
+/* LOGO STYLES*/
+.logo-text {
+   display: flex;
+   align-items: center;
+   font-size: 2.3rem;
+   margin-left: 0.3rem;
+}
+
+/* Hamburger toggle menu button */
+#toggleMenu {
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   z-index: 2;
+}
+#togglemenu:hover {
+   opacity: 0.6;
+}
+
+#toggle-btn {
+   width: 27px;
+   height: 23px;
+   position: absolute;
+   top: 1rem;
+   cursor: pointer;
+   transition: all 1s;
+   background: 0 0;
+   border: none;
+   outline: none;
+   margin-left: 1.05rem;
+}
+
+#toggle-btn span {
+   transition: all ease-in-out 0.7s;
+}
+
+#toggle-btn.open {
+   margin-left: 90vw;
+   cursor: pointer;
+}
+
+#sidebar.open {
+   width: 100vw;
+}
+
+/* Animation that makes the hamburger turn into close */
+#toggle-btn.open span:nth-child(2) {
+   width: 0;
+   opacity: 0;
+}
+
+#toggle-btn.open span:nth-child(1) {
+   transform: rotate(-45deg);
+   top: 18px;
+}
+
+#toggle-btn.open span:nth-child(3) {
+   transform: rotate(45deg);
+   top: 18px;
+}
+
+/* Spans that make up the Hamburger Menu */
+.line-1,
+.line-2,
+.line-3 {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 4px;
+   background-color: var(--black);
+}
+
+.line-1 {
+   top: 0;
+}
+.line-2 {
+   top: 15.5px;
+}
+.line-3 {
+   bottom: 0;
+}
+
+/* **********************MEDIA QUERIES********************************* */
+@media screen and (max-width: 1024px) {
+   .top-content-container {
+      flex-direction: column-reverse;
+      text-align: center;
+      height: 45vh;
+      padding: 3rem 1rem 0 1rem;
+   }
+   .wrapper {
+      padding: 0;
+   }
+   .wrapper .top-content p {
+      margin: auto;
+      font-size: 0.8rem;
+   }
+   .wrapper .about-header h2 {
+      font-size: 2rem;
+      display: inline-block;
+      padding: 0.8rem;
+   }
+   .bottom-image {
+      transform: scale(0.7);
+   }
+}
+/* On mobile screens */
+@media screen and (max-width: 500px) {
+   .top-content p {
+      padding-top: 0;
+   }
+   .top-content-container {
+      padding-top: 4rem;
+   }
+   .profile-image {
+      transform: scale(0.7);
+      padding-top: 1rem;
+   }
+   .about-header {
+      margin-top: -2rem;
+   }
+}
+
+/* Below tablet size hide bottom about container */
+@media screen and (max-width: 750px) {
+   .bottom-content-container {
+      display: none;
+   }
+}
+
+/* No greater than 900px, no less than 400px */
+@media (max-width: 1023px) and (min-width: 700px) {
+   .wrapper .top-content p {
+      font-size: 1rem;
+      line-height: 2rem;
+   }
+}
+
+/* Media queries for mobile phones */
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+   .form-container {
+      width: 90%;
+      height: 80%;
+      margin-top: 20%;
+   }
+   input[type="submit"] {
+      margin-top: -1px;
+   }
+   .form-left {
+      display: none;
+   }
+   .lg-view {
+      display: none;
+   }
+   .product-container {
+      height: 70%;
+   }
+   .product-description h2 {
+      margin-bottom: 1rem;
+   }
+   .product-description p {
+      display: none;
+   }
+   .wrapper::before {
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 77%);
+   }
+}
+
+/* media queries for tablets */
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+   .form-container {
+      width: 80%;
+   }
+}
+
+/* Removes second h2 in right form */
+@media only screen and (min-width: 601px) {
+   .sm-view {
+      display: none;
+   }
+}
+
+/* Media Queries for large screens */
+@media only screen and (max-width: 1024px) {
+   #main-wrapper {
+      margin-left: 0;
+   }
+   #logo-container,
+   .social-icons {
+      display: none;
+   }
+   nav {
+      background-color: transparent;
+      width: 30px;
+      box-shadow: none;
+   }
+   .menu {
+      text-align: center;
+   }
+   #toggle-btn {
+      width: 27px;
+      height: 23px;
+   }
+   .line-2 {
+      top: 9.5px;
+   }
+}
