@@ -1,220 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sticker Dev</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,800,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://kit.fontawesome.com/a738d29e1d.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Sticker Dev</title>
+      <link
+         href="https://fonts.googleapis.com/css?family=Montserrat:400,800,600&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+         rel="stylesheet"
+      />
+      <script src="https://kit.fontawesome.com/a738d29e1d.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-    <script
-      src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
-      id="snipcart"
-      data-api-key="MzYyYjYyYTYtYjhjZi00Mzc0LTk5NjUtNTc2MDM0NWU1M2JhNjM2OTY3NDU5NzMzMDEwMTkz"
-    ></script>
+      <script
+         src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+         id="snipcart"
+         data-api-key="MzYyYjYyYTYtYjhjZi00Mzc0LTk5NjUtNTc2MDM0NWU1M2JhNjM2OTY3NDU5NzMzMDEwMTkz"
+      ></script>
 
-    <link
-      href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
-      type="text/css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" class="rel">
-    <link rel="stylesheet" href="normalise.css">
-  </head>
+      <link
+         href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+         type="text/css"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles.css" class="rel" />
+      <link rel="stylesheet" href="normalise.css" />
+   </head>
 
-  <body>
-    <!-- Navigation -->
-    <nav id="sidebar" class="mobile-nav">
-      <!-- Hamburger / Close menu button -->
-      <div id="toggleMenu">
-        <button id="toggle-btn">
-          <span class="line-1"></span>
-          <span class="line-2"></span>
-          <span class="line-3"></span>
-        </button>
-      </div>
-      <!-- Logo -->
-      <div id="logo-container">
-        <a href="#home" class="logo-anchor">
-          <img
-            class="logo"
-            src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,h_78,w_70/v1561168591/StickerDev/StickerDev_logo.jpg"
-            alt="Sticker Dev Logo"
-            width="70"
-            height="78"
-          />
-          <h2 class="logo-text"><span class="light-text">STICKER</span>DEV</h2>
-        </a>
-      </div>
-      <!-- Menu Links -->
-      <ul class="menu">
-        <li class="nav-link"><a class="nav-anchor" href="#home">HOME</a></li>
-        <li class="nav-link"><a class="nav-anchor" href="#shop">SHOP</a></li>
-        <li class="nav-link"><a class="nav-anchor" href="#about">ABOUT</a></li>
-        <li class="nav-link">
-          <a class="nav-anchor" href="#contact">CONTACT</a>
-        </li>
-      </ul>
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a
-          class="social-icon facebook"
-          href="https://www.facebook.com/tim.moran.167"
-          target="_blank"
-          rel="author"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a
-          class="social-icon github"
-          href="https://github.com/tmoran18"
-          target="_blank"
-          rel="author"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          class="social-icon linkedin"
-          href="https://www.linkedin.com/in/t-m-37088683/"
-          target="_blank"
-          rel="author"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <div class="tooltip">
-          <span class="tooltiptext">Copy email to clipboard</span>
-          <a
-            class="social-icon email"
-            data-clipboard-text="moran.tim01@gmail.com"
-          >
-            <i class="far fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-    <!-- BODY -->
-    <div id="main-wrapper">
-      <!-- HOME -->
-      <section id="home">
-        <h1>Home TEST</h1>
-      </section>
-      <!-- SHOP -->
-      <section id="shop">
-        <div class="product-container">
-          <div class="image-container"></div>
-          <div class="product-description">
-            <h2>StickerDev Pack</h2>
-            <p>
-              StickerDev stickers are a high quality, long lasting matte finish
-              sticker. The stickers were printed locally in Brisbane and hand
-              cut with scissors by your's truly...seriously it took forever.
-              <br />
-              A big thanks to
-              <a href="https://csdigitalprint.com.au/" target="_blank"
-                >CS Digital Print</a
-              >
-              for supplying the great stickers.
-            </p>
-            <h2 class="price">$5.95</h2>
-          </div>
-          <div class="add-cart">
-            <button
-              class="snipcart-add-item"
-              data-item-id="1"
-              data-item-name="Stickers"
-              data-item-price="6.95"
-              data-item-url="/"
-              data-item-description="Developers Sticker Pack"
-            >
-              Buy Stickers
+   <body>
+      <!-- Navigation -->
+      <nav id="sidebar" class="mobile-nav">
+         <!-- Hamburger / Close menu button -->
+         <div id="toggleMenu">
+            <button id="toggle-btn">
+               <span class="line-1"></span>
+               <span class="line-2"></span>
+               <span class="line-3"></span>
             </button>
-          </div>
-        </div>
-      </section>
-      <section id="about">
-        <div class="wrapper">
-          <div class="top-content-container">
-            <div class="top-content">
-              <header class="about-header">
-                <!-- ABOUT -->
-                <h2>About</h2>
-              </header>
-               <p class="top-paragraph">Hi, my name is Tim. Welcome to the little pop-up sticker website I built.
-                 <br>
-                 <br>
-                  I built this website for a few reasons. I wanted to <strong>improve my skills</strong> by building a real-world project, to try and
-                  <strong>connect, interact or work with other developers</strong> in the industry, showcase my skills to <strong>potential employers</strong> and
-                  maybe make a little <strong>side hustle</strong> with my skills.</p>
-              </p>
+         </div>
+         <!-- Logo -->
+         <div id="logo-container">
+            <a href="#home" class="logo-anchor">
+               <img
+                  class="logo"
+                  src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,h_78,w_70/v1561168591/StickerDev/StickerDev_logo.jpg"
+                  alt="Sticker Dev Logo"
+                  width="70"
+                  height="78"
+               />
+               <h2 class="logo-text"><span class="light-text">STICKER</span>DEV</h2>
+            </a>
+         </div>
+         <!-- Menu Links -->
+         <ul class="menu">
+            <li class="nav-link"><a class="nav-anchor" href="#home">HOME</a></li>
+            <li class="nav-link"><a class="nav-anchor" href="#shop">SHOP</a></li>
+            <li class="nav-link"><a class="nav-anchor" href="#about">ABOUT</a></li>
+            <li class="nav-link">
+               <a class="nav-anchor" href="#contact">CONTACT</a>
+            </li>
+         </ul>
+         <!-- Social Icons -->
+         <div class="social-icons">
+            <a
+               class="social-icon facebook"
+               href="https://www.facebook.com/tim.moran.167"
+               target="_blank"
+               rel="author"
+            >
+               <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+               class="social-icon github"
+               href="https://github.com/tmoran18"
+               target="_blank"
+               rel="author"
+            >
+               <i class="fab fa-github"></i>
+            </a>
+            <a
+               class="social-icon linkedin"
+               href="https://www.linkedin.com/in/t-m-37088683/"
+               target="_blank"
+               rel="author"
+            >
+               <i class="fab fa-linkedin-in"></i>
+            </a>
+            <div class="tooltip">
+               <span class="tooltiptext">Copy email to clipboard</span>
+               <a class="social-icon email" data-clipboard-text="moran.tim01@gmail.com">
+                  <i class="far fa-envelope"></i>
+               </a>
             </div>
-            <div class="profile-image">
-              <img
-                src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_300/v1565724648/portrait_eqsphd.jpg"
-                alt=""
-              />
+         </div>
+      </nav>
+      <!-- BODY -->
+      <div id="main-wrapper">
+         <!-- HOME -->
+         <section id="home">
+            <h1>Home TEST</h1>
+         </section>
+         <!-- SHOP -->
+         <section id="shop">
+            <div class="product-container">
+               <div class="image-container">
+                  <img
+                     src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,q_100,w_155/v1567924811/brain_yajma3.jpg"
+                     alt=""
+                  />
+                  <img
+                     src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,q_100,w_150/v1567925168/IMG20190816184141_zueyxu.jpg"
+                     alt=""
+                  />
+               </div>
+               <div class="product-description">
+                  <h2>StickerDev Pack</h2>
+                  <p>
+                     StickerDev stickers are a high quality, long lasting matte finish sticker. The
+                     stickers were printed locally in Brisbane and hand cut with scissors by your's
+                     truly...seriously it took forever.
+                     <br />
+                     A big thanks to
+                     <a href="https://csdigitalprint.com.au/" target="_blank">CS Digital Print</a>
+                     for supplying the great stickers.
+                  </p>
+                  <h2 class="price">$5.95</h2>
+               </div>
+               <div class="add-cart">
+                  <button
+                     class="snipcart-add-item"
+                     data-item-id="1"
+                     data-item-name="Stickers"
+                     data-item-price="6.95"
+                     data-item-url="/"
+                     data-item-description="Developers Sticker Pack"
+                  >
+                     Buy Stickers
+                  </button>
+               </div>
             </div>
-          </div>
-          <div class="bottom-content-container">
-             <div class="left-bottom">
-              <img class="bottom-image" src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722250/code-signs_icznoh.png" alt="">
-              <h2>Skills</h2>
-              <p>Some of the skills I am currently practicing and imrporving on every day include: HTML | CSS | JavaScript | Preprocessors [SCSS] | Git Commands | Command Line | Design Tools [Photoshop / Figma]</p>
-             </div>
-             <div class="middle-bottom">
-              <img class="bottom-image" src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/lightbulb_1_kg8ant.png" alt="">
-              <h2>Interests</h2>
-              <p>My interests include all things technology, golf, fishing, scale modelling, music, movies, gaming, swimming and hanging out with my family</p>
-             </div>
-             <div class="right-bottom">
-              <img  class="bottom-image" src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/graduation-hat_xdecl8.png" alt="">
-              <h2>Education</h2>
-              <p>Studying Bachelor of I.T | GPA 6.5 | Academic Awards | Software Development Major</p>
-             </div>
-        </div>
-      </section>
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="form-container">
-          <div class="form-left">
-            <div class="form-left-content">
-              <h2>Let's Chat</h2>
-              <p>
-                Whether you have a question, want to start a project or simply
-                want to connect.
-              </p>
-              <br />
-              <p>Feel free to send me a message in the contact form</p>
+         </section>
+         <section id="about">
+            <div class="about-top">
+               <div class="about-top-container">
+                  <div class="about-text">
+                     <h2>About</h2>
+                     <p>
+                        Hi, my name is Tim. Welcome to the little pop-up sticker website I built.
+                     </p>
+                     <p>
+                        I built this website for a few reasons. I wanted to
+                        <strong>improve my skills</strong> by building a real-world project, to try
+                        and <strong>connect, interact or work with other developers</strong> in the
+                        industry, showcase my skills to <strong>potential employers</strong> and
+                        maybe make a little <strong>side hustle</strong> with my skills.
+                     </p>
+                  </div>
+                  <div class="about-profile-image">
+                     <img
+                        src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_300/v1565724648/portrait_eqsphd.jpg"
+                        alt=""
+                     />
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="form-right">
-            <div class="form-right-content">
-              <form action="#">
-                <h2 class="lg-view">Contact</h2>
-                <h2 class="sm-view">Let's Chat</h2>
-                <p>* Required</p>
-                <input type="text" placeholder="Name *" />
-                <input type="email" placeholder="Email *" />
-                <input type="text" placeholder="Company" />
-                <input type="phone" placeholder="Phone" />
-                <textarea rows="4" placeholder="Message"></textarea>
-                <input type="submit" value="Submit" />
-              </form>
+            <div class="about-bottom">
+               <div class="about-bottom-container">
+                  <div class="about-bottom-left center">
+                     <img
+                        src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722250/code-signs_icznoh.png"
+                        alt=""
+                     />
+                     <h2 class="center mt1">Skills</h2>
+                     <p>
+                        Some of the skills I am currently practicing and imrporving on every day
+                        include:
+                        <br />
+                        <br />
+                        HTML | CSS | JavaScript Preprocessors [SCSS] | Git Commands | Command Line |
+                        PHP Design Tools [Photoshop / Figma]
+                     </p>
+                  </div>
+                  <div class="about-bottom-middle center">
+                     <img
+                        src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/lightbulb_1_kg8ant.png"
+                        alt=""
+                     />
+                     <h2 class="center mt1">Interests</h2>
+                     <p>
+                        My interests include all things technology, golf, fishing, scale modelling,
+                        music, movies, gaming, swimming and hanging out with my family.
+                     </p>
+                  </div>
+                  <div class="about-bottom-right center">
+                     <img
+                        src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/graduation-hat_xdecl8.png"
+                        alt=""
+                     />
+                     <h2 class="center mt1">Education</h2>
+                     <p>
+                        Studying Bachelor of I.T
+                        <br />
+                        GPA 6.5
+                        <br />
+                        Academic Awards
+                        <br />
+                        Software Development Major
+                     </p>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <script src="index.js"></script>
-  </body>
+         </section>
+         <!-- CONTACT -->
+         <section id="contact">
+            <div class="form-container">
+               <div class="form-left">
+                  <div class="form-left-content">
+                     <h2>Let's Chat</h2>
+                     <p>
+                        Whether you have a question, want to start a project or simply want to
+                        connect.
+                     </p>
+                     <br />
+                     <p>Feel free to send me a message in the contact form</p>
+                  </div>
+               </div>
+               <div class="form-right">
+                  <div class="form-right-content">
+                     <form action="#">
+                        <p>* Required</p>
+                        <input type="text" placeholder="Name *" />
+                        <input type="email" placeholder="Email *" />
+                        <input type="text" placeholder="Company" />
+                        <input type="phone" placeholder="Phone" />
+                        <textarea rows="4" placeholder="Message"></textarea>
+                        <input type="submit" value="Submit" />
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <footer>
+         test
+      </footer>
+      <script src="index.js"></script>
+   </body>
 </html>

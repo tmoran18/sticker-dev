@@ -29,15 +29,28 @@ body {
    font-weight: 400;
 }
 
+.center {
+   text-align: center;
+}
+
+/* Margin-Top 1REM */
+.mt1 {
+   margin-top: 1rem;
+}
+
 /* BODY SECTION */
 #home,
 #shop,
 #about,
 #contact {
-   height: 100vh;
+   /* height: 100vh; */
    width: 100vw;
    display: flex;
    justify-content: center;
+}
+
+#contact {
+   padding: 2vw;
 }
 
 #home {
@@ -58,98 +71,62 @@ body {
 }
 
 /* *****************************ABOUT PAGE********************************* */
-
-.wrapper {
-   position: relative;
-   height: 100vh;
-   width: 100%;
-   z-index: -1;
-}
-
-.wrapper::before {
-   z-index: -1;
-   content: "";
-   top: 0;
-   left: 0;
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   background-color: var(--yellow);
-   background-size: cover;
-   background-position: top;
-   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-}
-
-.top-content-container {
+#about {
    display: flex;
-   max-width: 1200px;
-   height: 50vh;
-   margin: auto;
-   z-index: 2;
-   justify-content: center;
-   align-items: center;
+   flex-direction: column;
+}
+.about-top {
+   background: var(--yellow);
+   padding: 5vw;
 }
 
-.top-content {
-   flex: 1;
-}
-.top-content p {
-   font-size: 1.2rem;
-   line-height: 2rem;
-   max-width: 40rem;
-   text-align: justify;
-   color: var(--black);
-}
-.profile-image img {
-   border-radius: 100%;
-   border: 2px solid var(--pink);
-}
-.about-header h2 {
-   font-size: 3rem;
-   font-weight: 300;
-   padding: 2rem 0;
+.about-bottom {
+   padding: 4vw;
 }
 
-.bottom-content-container {
+.about-top-container,
+.about-bottom-container {
    display: flex;
    justify-content: space-around;
-}
-
-.bottom-content-container > div {
-   max-width: 20rem;
-   padding: 0 2rem;
-}
-.bottom-image {
-   padding: 1rem;
-   display: block;
+   max-width: 1200px;
    margin: auto;
 }
-
-.bottom-content-container h2 {
-   text-align: center;
-   font-size: 2rem;
-   font-weight: 300;
+.about-bottom-container {
+   flex-wrap: wrap;
 }
 
-.bottom-content-container p {
-   font-size: 1rem;
-   text-align: center;
-   line-height: 1.5rem;
-   padding-top: 1rem;
-   color: var(--black);
+.about-text {
+   max-width: 600px;
+}
+
+.about-text p {
+   line-height: 2;
+}
+.about-profile-image {
+   margin-left: 1rem;
+}
+
+.about-profile-image img {
+   border-radius: 100%;
+   border: 3px solid var(--pink);
+}
+
+.about-bottom-left,
+.about-bottom-middle,
+.about-bottom-right {
+   padding: 1rem;
+   max-width: 300px;
 }
 
 /* ****************************SHOP**************************** */
 .product-container {
    width: 650px;
-   height: 680px;
    margin: auto;
    margin-top: 7vh;
    padding-bottom: 5rem;
+   border: 1px solid red;
 }
 .image-container {
-   width: 85%;
-   height: 70%;
    margin: auto;
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -158,11 +135,7 @@ body {
    font-family: var(--montserrat);
    margin: 2.5rem;
 }
-h2 {
-   font-weight: 400;
-   font-size: 1.5rem;
-   margin-left: 1rem;
-}
+
 .product-description p {
    color: #6e6e6e;
    font-size: 0.8rem;
@@ -550,12 +523,12 @@ nav {
    }
 }
 
-/* Below tablet size hide bottom about container */
+/* Below tablet size hide bottom about container
 @media screen and (max-width: 750px) {
    .bottom-content-container {
       display: none;
    }
-}
+} */
 
 /* No greater than 900px, no less than 400px */
 @media (max-width: 1023px) and (min-width: 700px) {
@@ -567,20 +540,6 @@ nav {
 
 /* Media queries for mobile phones */
 @media only screen and (max-width: 500px) and (min-width: 300px) {
-   .form-container {
-      width: 90%;
-      height: 80%;
-      margin-top: 20%;
-   }
-   input[type="submit"] {
-      margin-top: -1px;
-   }
-   .form-left {
-      display: none;
-   }
-   .lg-view {
-      display: none;
-   }
    .product-container {
       height: 70%;
    }
@@ -595,19 +554,12 @@ nav {
    }
 }
 
-/* media queries for tablets */
+/* media queries for tablets
 @media only screen and (max-width: 1100px) and (min-width: 600px) {
    .form-container {
       width: 80%;
    }
-}
-
-/* Removes second h2 in right form */
-@media only screen and (min-width: 601px) {
-   .sm-view {
-      display: none;
-   }
-}
+} */
 
 /* Media Queries for large screens */
 @media only screen and (max-width: 1024px) {
@@ -633,4 +585,45 @@ nav {
    .line-2 {
       top: 9.5px;
    }
+}
+
+/* CONTACT FORM MEDIA QUERIES */
+/* Change the flex direction to column below 800px */
+@media only screen and (max-width: 800px) {
+}
+
+/*  ABOUT PAGE MEDIA QUERIES */
+@media only screen and (max-width: 1220px) {
+   .about-top-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+   }
+   .about-bottom-container > div {
+      width: 90%;
+   }
+
+   .about-bottom-container {
+      flex-direction: column;
+      align-items: center;
+   }
+   .form-container {
+      flex-direction: column;
+      height: auto;
+      width: 95%;
+   }
+   .form-left {
+      padding: 1rem;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .about-profile-image img {
+      width: 200px;
+   }
+}
+
+footer {
+   height: 50px;
+   width: 100%;
 }
