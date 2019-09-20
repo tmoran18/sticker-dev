@@ -38,6 +38,11 @@ body {
    margin-top: 1rem;
 }
 
+.hidden {
+   visibility: hidden;
+   position: absolute;
+}
+
 /* BODY SECTION */
 #home,
 #shop,
@@ -120,15 +125,21 @@ body {
 
 /* ****************************SHOP**************************** */
 .product-container {
-   width: 650px;
+   max-width: 650px;
    margin: auto;
    margin-top: 7vh;
    padding-bottom: 5rem;
-   border: 1px solid red;
 }
 .image-container {
    margin: auto;
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.image-container img {
+   margin: 0.2rem;
 }
 .product-description {
    margin-top: 2.5rem;
