@@ -58,9 +58,6 @@ body {
    padding: 2vw;
 }
 
-#home {
-   background-image: linear-gradient(to bottom, #ff5c00, #f58f31, #edb566, #ead4a2, #f0eee2);
-}
 #shop {
    background-color: #f8f8f8;
 }
@@ -73,6 +70,14 @@ body {
    display: flex;
    flex-wrap: wrap;
    align-items: center;
+}
+
+/* *****************************HOME PAGE********************************* */
+.background {
+   margin: 5vh;
+   width: 900px;
+   height: 600px;
+   background-image: url("https://res.cloudinary.com/dsjhcek2q/image/upload/v1569753943/StickerDev/cement_2_jucroh.jpg");
 }
 
 /* *****************************ABOUT PAGE********************************* */
@@ -127,35 +132,37 @@ body {
 .product-container {
    max-width: 650px;
    margin: auto;
-   margin-top: 7vh;
+   margin-top: 2vh;
    padding-bottom: 5rem;
 }
 .image-container {
    margin: auto;
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
    display: flex;
-   flex-wrap: wrap;
+   flex-direction: column;
+}
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+   display: flex;
    justify-content: center;
+   align-items: center;
 }
 
 .image-container img {
-   margin: 0.2rem;
+   width: 25%;
+   height: 20%;
+   margin: 0.3rem;
 }
+
 .product-description {
    margin-top: 2.5rem;
    font-family: var(--montserrat);
    margin: 2.5rem;
+   text-align: center;
 }
 
-.product-description p {
-   color: #6e6e6e;
-   font-size: 0.8rem;
-   line-height: 1.5rem;
-   padding: 1rem;
-}
-.price {
-   font-weight: 600;
-}
 .add-cart {
    display: flex;
    justify-content: center;
