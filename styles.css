@@ -101,19 +101,6 @@ body {
    border: 5px solid black;
 }
 
-.cta {
-   background: var(--emailRed);
-   border: 2px solid black;
-   padding: 1rem 2rem;
-   border-radius: 50px;
-   width: 200px;
-   font-size: 1rem;
-   font-weight: 700;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-   margin-bottom: 2rem;
-   margin: 2rem;
-   color: white;
-}
 /* *****************************ABOUT PAGE********************************* */
 #about {
    display: flex;
@@ -202,19 +189,23 @@ body {
    justify-content: center;
 }
 .snipcart-add-item {
-   width: 15rem;
-   height: 50px;
+   background: var(--emailRed);
+   border: 2px solid black;
+   padding: 1rem 2rem;
+   border-radius: 50px;
+   width: 200px;
+   font-size: 1rem;
+   font-weight: 700;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   margin-bottom: 2rem;
+   margin: 2rem;
+   color: white;
    cursor: pointer;
-   background: #ff473a;
-   border: none;
-   border-radius: 2px;
-   color: var(--white);
-   font-size: 1.5rem;
-   font-weight: 600;
 }
 .snipcart-add-item:hover {
-   background-color: var(--black);
-   color: var(--white);
+   transform: scale(1.2);
+   background: var(--black);
+   border: 2px solid var(--emailRed);
 }
 /* ********************SOCIAL ICONS************************************ */
 /*** Social Icons Container ***/
@@ -294,7 +285,8 @@ i {
    width: 120px;
    height: 34px;
    color: var(--black);
-   border: 1px solid var(--black);
+   /* border: 1px solid var(--black); */
+   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
    font-size: 1rem;
    text-align: center;
    padding: 5px 0;
@@ -313,7 +305,7 @@ i {
    content: "";
    border-width: 10px 8px 0 8px;
    border-style: solid;
-   border-color: var(--black) transparent transparent transparent;
+   border-color: #aaa transparent transparent transparent;
    position: absolute;
    top: 44px;
    left: 86px;
@@ -603,6 +595,30 @@ nav {
    }
    .wrapper::before {
       clip-path: polygon(0 0, 100% 0, 100% 33%, 0 77%);
+   }
+   .title {
+      font-size: 1.5rem;
+   }
+   .title:first-child {
+      margin-top: 3rem;
+   }
+   .hero-image-container {
+      padding: none;
+      margin-top: -1rem;
+   }
+   #home .snipcart-add-item {
+      width: 140px;
+      font-size: 0.8rem;
+      margin: 0rem 0.5rem 2rem 0.5rem;
+   }
+   .image-container {
+      margin: 2rem 0.5rem 1rem 0.5rem;
+   }
+   .product-description h2 {
+      font-size: 1.2rem;
+   }
+   .add-cart {
+      margin: -3rem;
    }
 }
 

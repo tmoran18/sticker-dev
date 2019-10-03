@@ -60,7 +60,7 @@ function toggleMenu() {
     sidebar.style.backgroundColor = 'rgb(255, 255, 255)';
     sidebar.style.opacity = '0.90';
     closeNav();
-    setTimeout(function() {
+    setTimeout(function () {
       openNav();
     }, 3000);
     console.log('closenav - toggle menu on timeout');
@@ -85,21 +85,23 @@ toggleNav.addEventListener('click', toggleMenu);
 function tooltipTimer() {
   const toolTip = document.querySelector('.tooltiptext');
   toolTip.innerHTML = 'Email Copied!';
-  toolTip.style.color = 'red';
+  toolTip.style.color = '#333';
+  toolTip.style.background = "#82E0AA";
   toolTip.style.fontWeight = '600';
-  setTimeout(function() {
+  setTimeout(function () {
     // Timer function to set tooltip back to normal style
     toolTip.innerHTML = 'Copy email to clipboard';
     toolTip.style.fontSize = '1rem';
+    toolTip.style.background = "#fff";
     toolTip.style.color = '#252527';
   }, 1000);
 }
 
 // ClipboardJS
 const clipboard = new ClipboardJS('.email');
-clipboard.on('success', function() {
+clipboard.on('success', function () {
   tooltipTimer();
 });
-clipboard.on('error', function() {
+clipboard.on('error', function () {
   console.log('Error');
 });
