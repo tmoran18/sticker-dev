@@ -187,6 +187,8 @@ body {
 .add-cart {
    display: flex;
    justify-content: center;
+   width: 300px;
+   margin: auto;
 }
 .snipcart-add-item {
    background: var(--emailRed);
@@ -417,6 +419,7 @@ nav {
    padding: 2rem 5.7rem;
    font-size: 1.2rem;
 }
+
 .logo-anchor {
    display: flex;
    margin: 3.5rem 1rem;
