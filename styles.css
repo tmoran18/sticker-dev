@@ -675,8 +675,14 @@ footer {
       height: auto;
       width: 95%;
    }
+   .form-left h2 {
+      margin-top: -50px;
+   }
    .form-left {
-      padding: 1rem;
+      min-height: 250px;
+   }
+   .form-container {
+      padding-bottom: 30px;
    }
 }
 
@@ -689,4 +695,12 @@ footer {
 footer {
    height: 50px;
    width: 100%;
+}
+
+[data-for="phone"] {
+   display: none;
+}
+
+[data-for="email"] {
+   margin-top: -1px !important;
 }
