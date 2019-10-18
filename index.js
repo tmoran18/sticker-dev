@@ -55,7 +55,6 @@ function closeNavResize() {
 function toggleMenu() {
   if (toggleStatus === 1) {
     openNav();
-    console.log('openav - togglemenu');
   } else if (toggleStatus === 0) {
     sidebar.style.backgroundColor = 'rgb(255, 255, 255)';
     sidebar.style.opacity = '0.90';
@@ -63,17 +62,14 @@ function toggleMenu() {
     setTimeout(function () {
       openNav();
     }, 3000);
-    console.log('closenav - toggle menu on timeout');
   }
 }
 
 function navMediaQuery(browserWindow) {
   if (browserWindow.matches) {
     openNav();
-    console.log('openav - navMediaQuery');
   } else {
     closeNavResize();
-    console.log('closeNavResize - navMediaQuery');
   }
 }
 // Media Query - If Viewport is less than 1024px
