@@ -128,10 +128,12 @@ body {
 
 .about-text {
    max-width: 600px;
+   margin-bottom:2rem;
 }
 
 .about-text p {
    line-height: 2;
+   padding-bottom:2rem;
 }
 .about-profile-image {
    margin-left: 1rem;
@@ -395,8 +397,8 @@ nav {
    width: 360px;
    background-color: var(--white);
    position: fixed;
-   top: 0;
-   bottom: 0;
+   top:0px;
+   bottom: 0px;
    left: 0;
    transition: all ease 1s;
    -webkit-transition: all ease1s;
@@ -419,11 +421,11 @@ nav {
    position: relative;
 }
 
-.portfolio-website {
+.about-text .portfolio-website {
    font-size: 1.5rem;
-   color: var(--black);
+   color: var(--lnkBlue);
    text-align: center;
-   margin-bottom: 7rem;
+   text-decoration: underline;
 }
 
 .portfolio-website:hover {
