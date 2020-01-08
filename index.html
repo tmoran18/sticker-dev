@@ -1,207 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="StickerDev provides high quality web development stickers for web developers who want some fun and cool stickers for their laptops or other items"
+    />
+    <title>Sticker Dev</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,800,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a738d29e1d.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
 
-<head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <meta name="description" content="StickerDev provides high quality web development stickers for web developers who want some fun and cool stickers for their laptops or other items">
-   <title>Sticker Dev</title>
-   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800,600&display=swap" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet" />
-   <script src="https://kit.fontawesome.com/a738d29e1d.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+      id="snipcart"
+      data-api-key="MTZiOGZjNjYtZDVmYS00NjlhLTkyYmItYzk5YTgzNDYwY2ZkNjM2OTY3NDU5NzMzMDEwMTkz"
+    ></script>
 
-   <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MTZiOGZjNjYtZDVmYS00NjlhLTkyYmItYzk5YTgzNDYwY2ZkNjM2OTY3NDU5NzMzMDEwMTkz"></script>
+    <link
+      href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" class="rel" />
+    <link rel="stylesheet" href="normalise.css" />
+  </head>
 
-   <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-   <link rel="stylesheet" href="styles.css" class="rel" />
-   <link rel="stylesheet" href="normalise.css" />
-</head>
-
-<body>
-   <!-- Navigation -->
-   <nav id="sidebar" class="mobile-nav">
+  <body>
+    <!-- Navigation -->
+    <nav id="sidebar" class="mobile-nav">
       <!-- Hamburger / Close menu button -->
       <div id="toggleMenu">
-         <button id="toggle-btn" aria-label="Hamburger Menu Button">
-            <span class="line-1"></span>
-            <span class="line-2"></span>
-            <span class="line-3"></span>
-         </button>
+        <button id="toggle-btn" aria-label="Hamburger Menu Button">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+        </button>
       </div>
       <!-- Logo -->
       <div id="logo-container">
-         <a href="#home" class="logo-anchor">
-            <img class="logo" src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,h_78,w_70/v1561168591/StickerDev/StickerDev_logo.jpg" alt="Sticker Dev Logo" width="70" height="78" />
-            <h2 class="logo-text"><span class="light-text">STICKER</span>DEV</h2>
-         </a>
+        <a href="#home" class="logo-anchor">
+          <img
+            class="logo"
+            src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,h_78,w_70/v1561168591/StickerDev/StickerDev_logo.jpg"
+            alt="Sticker Dev Logo"
+            width="70"
+            height="78"
+          />
+          <h2 class="logo-text"><span class="light-text">STICKER</span>DEV</h2>
+        </a>
       </div>
       <!-- Menu Links -->
       <ul class="menu">
-         <li class="nav-link"><a class="nav-anchor" href="#home">HOME</a></li>
-         <li class="nav-link"><a class="nav-anchor" href="#about">ABOUT</a></li>
-         <li class="nav-link"><a class="nav-anchor" href="#shop">SHOP</a></li>
-         <li class="nav-link"><a class="nav-anchor" href="#contact">CONTACT</a></li>
+        <li class="nav-link"><a class="nav-anchor" href="#home">HOME</a></li>
+        <li class="nav-link"><a class="nav-anchor" href="#about">ABOUT</a></li>
+        <li class="nav-link"><a class="nav-anchor" href="#shop">SHOP</a></li>
+        <li class="nav-link">
+          <a class="nav-anchor" href="#contact">CONTACT</a>
+        </li>
       </ul>
-      
+
       <!-- Social Icons -->
       <div class="social-icons">
-         <a class="social-icon facebook" href="https://www.facebook.com/tim.moran.167" target="_blank" rel="author" aria-label="A link to Tim's Facebook Page" rel="noopener">
-            <i class="fab fa-facebook-f"></i>
-         </a>
-         <a class="social-icon github" href="https://github.com/tmoran18" target="_blank" rel="author" aria-label="A link to Tim's Github Account" rel="noopener">
-            <i class="fab fa-github"></i>
-         </a>
-         <a class="social-icon linkedin" href="https://www.linkedin.com/in/tim-moran-388238193/" target="_blank" rel="author" aria-label="A link to Tim's Linkedin Account" rel="noopener">
-            <i class="fab fa-linkedin-in"></i>
-         </a>
-         <div class="tooltip">
-            <span class="tooltiptext">Copy email to clipboard</span>
-            <a class="social-icon email" data-clipboard-text="moran.tim01@gmail.com">
-               <i class="far fa-envelope"></i>
-            </a>
-         </div>
+        <a
+          class="social-icon facebook"
+          href="https://www.facebook.com/tim.moran.167"
+          target="_blank"
+          rel="author"
+          aria-label="A link to Tim's Facebook Page"
+          rel="noopener"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          class="social-icon github"
+          href="https://github.com/tmoran18"
+          target="_blank"
+          rel="author"
+          aria-label="A link to Tim's Github Account"
+          rel="noopener"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          class="social-icon linkedin"
+          href="https://www.linkedin.com/in/tim-moran-388238193/"
+          target="_blank"
+          rel="author"
+          aria-label="A link to Tim's Linkedin Account"
+          rel="noopener"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <div class="tooltip">
+          <span class="tooltiptext">Copy email to clipboard</span>
+          <a
+            class="social-icon email"
+            data-clipboard-text="moran.tim01@gmail.com"
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+        </div>
       </div>
-   </nav>
-   <!-- BODY -->
-   <div id="main-wrapper">
+    </nav>
+    <!-- BODY -->
+    <div id="main-wrapper">
       <!-- HOME -->
       <section id="home">
-         <h1 class="title">Who doesn't love stickers!</h1>
-         <div class="hero-image-container">
-            <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/q_auto/v1570016375/StickerDev/cement_xedtjh.jpg" alt="">
-         </div>
-         <p class="center">Pack includes all 11 stickers as pictured above.</p>
-         <h1 class="title">get your pack now - $5.95</h1>
-         <div class="button-container">
-            <button class="snipcart-add-item" data-item-id="1" data-item-name="Stickers" data-item-price="5.95" data-item-url="https://stickerdev.tech" data-item-description="Developers Sticker Pack"
-               aria-label="Buy Now Button">Buy
-               Now</button>
-            <a href="#about"> <button class="snipcart-add-item" aria-label="About Button">About</button></a>
-         </div>
+        <h1 class="title">Who doesn't love stickers!</h1>
+        <div class="hero-image-container">
+          <img
+            src="https://res.cloudinary.com/dsjhcek2q/image/upload/q_auto/v1570016375/StickerDev/cement_xedtjh.jpg"
+            alt=""
+          />
+        </div>
+        <p class="center">Pack includes all 11 stickers as pictured above.</p>
+        <h1 class="title">get your pack now - $5.95</h1>
+        <div class="button-container">
+          <button
+            class="snipcart-add-item"
+            data-item-id="1"
+            data-item-name="Stickers"
+            data-item-price="5.95"
+            data-item-url="https://stickerdev.tech"
+            data-item-description="Developers Sticker Pack"
+            aria-label="Buy Now Button"
+          >
+            Buy Now
+          </button>
+          <a href="#about">
+            <button class="snipcart-add-item" aria-label="About Button">
+              About
+            </button></a
+          >
+        </div>
       </section>
       <!-- ABOUT -->
       <section id="about">
-         <div class="about-top">
-            <div class="about-top-container">
-               <div class="about-text">
-                  <h2>About</h2>
-                  <p>
-                     Hi, my name is Tim. Welcome to the little pop-up sticker website I built.
-                  </p>
-                  <p>
-                     I built this website for a few reasons. I wanted to
-                     <strong>improve my skills</strong> by building a real-world project, try to
-                     <strong>connect, interact or work with other developers</strong> in the
-                     industry, showcase my skills to <strong>potential employers</strong> and
-                     maybe make a little <strong>side hustle</strong> with my skills.
-                  </p>
-                  <a href="https://www.tim-moran.com/" target="_blank" class="portfolio-website">www.tim-moran.com</a>
-               </div>
-               <div class="about-profile-image">
-                  <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_300/v1565724648/portrait_eqsphd.jpg" alt="" />
-               </div>
+        <div class="about-top">
+          <div class="about-top-container">
+            <div class="about-text">
+              <h2>About</h2>
+              <p>
+                Hi, my name is Tim. Welcome to the little pop-up sticker website
+                I built.
+              </p>
+              <p>
+                I built this website for a few reasons. I wanted to
+                <strong>improve my skills</strong> by building a real-world
+                project, try to
+                <strong>connect, interact or work with other developers</strong>
+                in the industry, showcase my skills to
+                <strong>potential employers</strong> and maybe make a little
+                <strong>side hustle</strong> with my skills.
+                <br />
+                <br />
+                <strong>Check out my portfolio site below</strong>
+              </p>
+              <a
+                href="https://www.tim-moran.com/"
+                target="_blank"
+                class="portfolio-website"
+                >www.tim-moran.com</a
+              >
             </div>
-         </div>
-         <div class="about-bottom">
-            <div class="about-bottom-container">
-               <div class="about-bottom-left center">
-                  <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722250/code-signs_icznoh.png" alt="" />
-                  <h2 class="center mt1">Skills</h2>
-                  <p>
-                     Some of the skills I am currently practicing and improving on every day
-                     include:
-                     <br />
-                     <br />
-                     HTML | CSS | JavaScript Pre-processors [SCSS] | Git Commands | Command Line |
-                     PHP Design Tools [Photoshop / Figma]
-                  </p>
-               </div>
-               <div class="about-bottom-middle center">
-                  <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/lightbulb_1_kg8ant.png" alt="" />
-                  <h2 class="center mt1">Interests</h2>
-                  <p>
-                     My interests include all things technology, golf, fishing, scale modelling,
-                     music, movies, gaming, swimming and hanging out with my family.
-                  </p>
-               </div>
-               <div class="about-bottom-right center">
-                  <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/graduation-hat_xdecl8.png" alt="" />
-                  <h2 class="center mt1">Education</h2>
-                  <p>
-                     Studying Bachelor of I.T
-                     <br />
-                     GPA 6.5
-                     <br />
-                     Academic Awards
-                     <br />
-                     Software Development Major
-                  </p>
-               </div>
+            <div class="about-profile-image">
+              <img
+                src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_300/v1565724648/portrait_eqsphd.jpg"
+                alt=""
+              />
             </div>
-         </div>
+          </div>
+        </div>
+        <div class="about-bottom">
+          <div class="about-bottom-container">
+            <div class="about-bottom-left center">
+              <img
+                src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722250/code-signs_icznoh.png"
+                alt=""
+              />
+              <h2 class="center mt1">Skills</h2>
+              <p>
+                Some of the skills I am currently practicing and improving on
+                every day include:
+                <br />
+                <br />
+                HTML | CSS | JavaScript | Pre-processors [SCSS] | Git | Design
+                Patterns | C# .NET | Design Tools [Photoshop / Figma]
+              </p>
+            </div>
+            <div class="about-bottom-middle center">
+              <img
+                src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/lightbulb_1_kg8ant.png"
+                alt=""
+              />
+              <h2 class="center mt1">Interests</h2>
+              <p>
+                My interests include all things technology, golf, fishing, scale
+                modelling, music, movies, gaming, swimming and hanging out with
+                my family.
+                <br>
+                <br>
+                <p>Tech stack wise I am interested in both front-end and back-end. The ultimate goal is to become a full stack developer. So I have focused mainly on front-end fundamentals and currently diving into C# .NET</p>
+              </p>
+            </div>
+            <div class="about-bottom-right center">
+              <img
+                src="https://res.cloudinary.com/dsjhcek2q/image/upload/c_scale,w_150/v1565722251/graduation-hat_xdecl8.png"
+                alt=""
+              />
+              <h2 class="center mt1">Education</h2>
+              <p>
+                Studying Bachelor of I.T
+                <br />
+                GPA 6.5
+                <br />
+                Academic Awards
+                <br />
+                Software Development Major
+                <br>
+                Human Sponge
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- SHOP -->
       <section id="shop">
-         <div class="product-container">
-            <div class="image-container">
-               <img src="https://res.cloudinary.com/dsjhcek2q/image/upload/v1570331152/StickerDev/laptop_r0zlqm.jpg" alt="">
-            </div>
-            <div class="product-description">
-               <h2>Sticker Pack - $5.95</h2>
-            </div>
-            <div class="add-cart">
-               <button class="snipcart-add-item cta" data-item-id="1" data-item-name="Stickers" data-item-price="5.95" data-item-url="/" data-item-description="Developers Sticker Pack"
-                  aria-label="Buy Now Button">
-                  Buy Now
-               </button>
-            </div>
-         </div>
+        <div class="product-container">
+          <div class="image-container">
+            <img
+              src="https://res.cloudinary.com/dsjhcek2q/image/upload/v1570331152/StickerDev/laptop_r0zlqm.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product-description">
+            <h2>Sticker Pack - $5.95</h2>
+          </div>
+          <div class="add-cart">
+            <button
+              class="snipcart-add-item cta"
+              data-item-id="1"
+              data-item-name="Stickers"
+              data-item-price="5.95"
+              data-item-url="/"
+              data-item-description="Developers Sticker Pack"
+              aria-label="Buy Now Button"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
       </section>
 
       <!-- CONTACT -->
       <section id="contact">
-         <div class="form-container">
-            <div class="form-left">
-               <div class="form-left-content">
-                  <h2>Let's Chat</h2>
-                  <p>
-                     Whether you have a question, want to start a project or simply want to
-                     connect.
-                  </p>
-                  <br />
-                  <p>Feel free to send me a message in the contact form</p>
-               </div>
+        <div class="form-container">
+          <div class="form-left">
+            <div class="form-left-content">
+              <h2>Let's Chat</h2>
+              <p>
+                Whether you have a question, want to start a project or simply
+                want to connect.
+              </p>
+              <br />
+              <p>Feel free to send me a message in the contact form</p>
             </div>
-            <div class="form-right">
-               <div class="form-right-content">
-                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                     <p class="hidden">
-                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                     </p>
-                     <p>* Required</p>
-                     <input aria-label="name" type="text" name="name" placeholder="Name *" required />
-                     <input aria-label="email" type="email" name="email" placeholder="Email *" required />
-                     <input aria-label="company" type="text" name="company" placeholder="Company" />
-                     <input aria-label="phone" type="phone" name="phone" placeholder="Phone" />
-                     <textarea aria-label="message" rows="4" name="message" placeholder="Message"></textarea>
-                     <input type="submit" value="Submit" />
-                  </form>
-               </div>
+          </div>
+          <div class="form-right">
+            <div class="form-right-content">
+              <form
+                name="contact"
+                method="POST"
+                netlify-honeypot="bot-field"
+                data-netlify="true"
+              >
+                <p class="hidden">
+                  <label
+                    >Don’t fill this out if you're human:
+                    <input name="bot-field"
+                  /></label>
+                </p>
+                <p>* Required</p>
+                <input
+                  aria-label="name"
+                  type="text"
+                  name="name"
+                  placeholder="Name *"
+                  required
+                />
+                <input
+                  aria-label="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email *"
+                  required
+                />
+                <input
+                  aria-label="company"
+                  type="text"
+                  name="company"
+                  placeholder="Company"
+                />
+                <input
+                  aria-label="phone"
+                  type="phone"
+                  name="phone"
+                  placeholder="Phone"
+                />
+                <textarea
+                  aria-label="message"
+                  rows="4"
+                  name="message"
+                  placeholder="Message"
+                ></textarea>
+                <input type="submit" value="Submit" />
+              </form>
             </div>
-         </div>
+          </div>
+        </div>
       </section>
-      
-   </div>
-   <footer>
+    </div>
+    <footer>
       <p>&copy; StickerDev 2019</p>
-   </footer>
-   <script src="index.js"></script>
-</body>
-
+    </footer>
+    <script src="index.js"></script>
+  </body>
 </html>
